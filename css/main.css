@@ -1,0 +1,380 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.4;
+}
+
+h1,h2{
+	margin-top: 0;
+	/*margin-bottom: 0;*/
+}
+
+a{
+	text-decoration: none;
+	/*color: #fff;*/
+}
+a:hover{
+	text-decoration: none;
+	/*color: #fff;*/
+}
+
+img{
+	width: 50%;
+}
+
+p{
+	line-height: 2.0;
+	font-size: 1.5rem;
+	letter-spacing: 0.7;
+}
+
+/*=====================================================
+
+GENERAL STYLING
+
+======================================================*/
+
+.section-header{ /*styles header title of every section */
+	text-align: center;
+	margin-bottom: 1.875em; /*30px*/
+	border-bottom: 1px solid #c0c0c0;
+	padding-top: 0.625em;
+	padding-bottom: 0.625em;
+	text-transform: capitalize;
+}
+
+.read-more{ /*styles all buttons with the text "READ MORE"*/ 
+	border: 2px solid #5CB860; 
+	display: inline-block;
+	border-radius: 5px;
+	padding: 5px 15px;
+	color: #5CB860;
+	font-size: 1.25em;
+	-webkit-transition-duration: 0.4s; /* For Safari 5.1 to 6.0 */
+    -o-transition-duration: 0.4s; /* For Opera 11.1 to 12.0 */
+    -moz-transition-duration: 0.4s; /* For Firefox 3.6 to 15 */
+    transition-duration: 0.4s; /* Standard syntax */
+	
+}
+
+.read-more:hover{ /*styles applied when "READ MORE" buttons are hovered*/
+	background-color: #5CB860;
+	color: #fff;
+	border: 2px solid #5CB860;
+}
+
+/*=====================================================
+
+INTRODUCTION IMAGE 
+
+======================================================*/
+
+.intro-image{
+	min-height: 100vh;
+	background: #5CB860 url('../img/rockstar.jpg') no-repeat fixed center;
+	background-size: cover;
+	/*background-blend-mode: multiply;*/
+	position: relative; /*for positioning .main-banner and navigation*/
+}
+
+/*=====================================================
+
+NAVIGATION 
+
+======================================================*/
+.main-header{
+	background-color: #ffffff;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 999;
+}
+
+.main-header > h1{
+	margin: 0;
+	padding: 0;
+}
+
+.main-header-sticky{
+	z-index: 999;
+	background-color: #222222;
+}
+
+.main-logo{
+	float: left;	
+}
+
+.main-logo a, .main-nav a{
+	text-align: center;
+	padding: 10px 15px;
+	display: block;
+	color: #fff;
+}
+
+.main-nav{
+	/*background-color: #C0C0C0;*/
+	float: right;
+	padding-top: 0.625em; /*10px*/
+}
+
+.main-nav > li{
+	float: left;
+	margin-left: 12px;
+}
+
+.main-nav a{
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.main-nav a:hover{
+	opacity: .5;
+}
+
+
+/*=====================================================
+
+BANNER 
+
+======================================================*/
+.main-banner{
+	position: absolute;
+	bottom: 180px;/*180px*/
+	left: 50px; /*50px*/
+}
+
+.main-banner h2, 
+.main-banner p,
+.main-banner a{
+	color: #fff;
+}
+
+.main-banner h2{
+	text-transform: capitalize;
+	font-size: 4.375em; /*70px*/
+	margin-bottom: 15px;
+}
+
+.main-banner p{
+	font-style: italic;
+	font-size: 1.875em; /*30px*/
+	white-space: pre-line;
+}
+
+.main-banner a{
+	display: inline-block;
+	padding: 10px 15px; /*10px 15px*/
+	border: 1px solid #fff;
+	background: rgba(255, 255, 255, .2);
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-size: 1.875em;
+}
+
+.main-banner a:hover{
+	background: rgba(255, 255, 255, .4);
+}
+
+
+
+
+/*=====================================================
+
+BODY 
+
+======================================================*/
+.bg-overlay{
+	width: 100%;
+	padding-top: 3.75em; /*60px*/
+	padding-bottom: 3.75em; /*60px*/
+}
+
+.bg-overlay-grey{
+	background-color: #FAFAFA;
+}
+
+.bg-overlay-white{
+	background-color: #fff;
+}
+
+.wrapper{
+	width: 85%;
+	margin: 0 auto;
+	max-width: 1150px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	/*padding-bottom: 100px;
+	line-height: 2.0;*/
+	/*border: 1px solid blue;*/
+}
+
+
+/****************** ABOUT ***************************/
+
+#about{
+	min-height: 100vh;
+}
+
+#about p{
+	font-size: 1.875em; /*21px*/
+	color: #7c7c7c;
+	text-align: center;
+}
+
+#about a{ /*styles the "read more" and "next-section" anchor elements*/
+	border: 2px solid #c0c0c0;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 5px 30px;
+	color: #7c7c7c;
+	font-size: 1.25em; /*20px*/
+	position: relative; /*for positioning the double arrow*/
+	-webkit-transition-duration: 0.4s; /* For Safari 5.1 to 6.0 */
+    -o-transition-duration: 0.4s; /* For Opera 11.1 to 12.0 */
+    -moz-transition-duration: 0.4s; /* For Firefox 3.6 to 15 */
+    transition-duration: 0.4s; /* Standard syntax */
+}
+
+.center{ /*centers the anchor element in the "about" section*/
+	text-align: center;
+}
+
+
+#about span::after{
+	content: '»';
+	position: absolute;
+	opacity: 0;
+	top: 4px;
+  	right: -2px;
+  	color: #fff;
+  	-webkit-transition: 0.5s;
+  	-moz-transition: 0.5s;
+  	-o-transition: 0.5s;
+  	transition: 0.5s;
+}
+
+
+#about a:hover{
+	border: 2px solid #5CB860;
+	background-color: #5CB860;
+	color: #fff;
+}
+
+#about a:hover span::after{
+	opacity: 1;
+	right: 15px;
+}
+
+#about-circles{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.circle{
+	display: inline-block;
+	background-color: #D1D2D4;
+	height: 250px;
+	width: 250px;
+	border-radius: 100%;
+	border: 5px solid #A9ABAE;
+	margin-right: 10px;
+	padding: 8px; /*white space around the circle*/
+	background-clip: content-box;
+}
+
+
+/****************** SERVICES ***************************/
+
+.box{
+	width: 500px;
+	height: 350px;
+	border-radius: 5px;
+	box-shadow: 0px 1px 5px 1px;/*horizontal offset, vertical offset, blur radius, spread radius, color */
+}
+
+.box1{ 
+	background: url('../img/living-room.jpg') no-repeat center; 
+	background-size: cover;
+}
+.box2{ background: #C1E0F5 url('../img/business-desk.jpg') no-repeat center center; background-size: cover; background-blend-mode:multipy;}
+.box3{ background: #C1E0F5 url('../img/international-transfer.jpg') no-repeat center center; background-size: cover; background-blend-mode:multipy;}
+.box4{ background: #C1E0F5 url('../img/living-room.jpg') no-repeat center center; background-size: cover; background-blend-mode:multipy;}
+.box5{ background: #C1E0F5 url('../img/hand-signing-contract.jpg') no-repeat center center; background-size: cover; background-blend-mode:multipy;}
+.box6{ background: #C1E0F5 url('../img/courier.jpg') no-repeat center center; background-size: cover; background-blend-mode:multipy;}
+
+
+/****************** HOW WE MOVE YOU ***************************/
+
+
+.steps{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.move-row{
+	margin-bottom: 3.75em;/*60px*/
+}
+
+.move-row p{
+	margin: 0;
+}
+
+.step1-circle{ background-color: #FBAEA8;}
+.step2-circle{ background-color: #C1E0F5;}
+.step3-circle{ background-color:#DCE1E5;}
+
+
+/****************** CLIENTE ***************************/
+
+#cliente{
+	min-height: 100vh;
+}
+
+#cliente p{
+	font-size: 1.875em; /*21px*/
+	color: #7c7c7c;
+	text-align: center;
+}
+
+.cliente-circle{
+	display: inline-block;
+	height: 250px;
+	width: 250px;
+	border-radius: 100%;
+	border: 5px solid #A9ABAE;
+	margin-right: 10px;
+	padding: 8px; /*white space around the circle*/
+	background-clip: content-box;
+}
+
+.cliente-circle1{background:#D1D2D4;}
+.cliente-circle2{background:#D1D2D4 url('../img/ngo.png') no-repeat cover;}
+.cliente-circle3{background:#D1D2D4 url('../img/bank-building.png') no-repeat cover;}
+
+
+/****************** REQUEST A QUOTE ***************************/
+#quote{
+	min-height: 100vh;
+}
+
+
+
+@media only screen and(min-width:768px) and(max-width:1280px){
+
+}
+
+@media only screen and(min-width:1200px){
+
+}
+
+
+/****************** FIXES ***************************/
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
