@@ -15,7 +15,7 @@
 				<li><a href="#about">About Us</a></li>
 				<li><a href="#services">Services</a></li>
 				<li><a href="contact.php">Contact Us</a></li>
-				<li><a href="contact.php">FAQS</a></li>
+				<li><a href="faqs.php">FAQS</a></li>
 			</ul>
 		</header>
 		<div class="main-banner">
